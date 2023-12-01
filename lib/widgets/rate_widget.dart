@@ -2,18 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RateWidget extends StatelessWidget {
-  const RateWidget({super.key, required this.doubleRate});
+  const RateWidget({super.key, required this.doubleRate, required this.textColor});
   final double doubleRate;
-
+  final Color? textColor;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
           doubleRate.toString(),
-          style:const TextStyle(
+          style: TextStyle(
             fontSize: 15,
-            color: Colors.white,
+            color: textColor??Colors.white,
             fontWeight: FontWeight.bold,
           ),
         ),
